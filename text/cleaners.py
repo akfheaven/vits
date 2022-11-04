@@ -98,3 +98,9 @@ def english_cleaners2(text):
   phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
   phonemes = collapse_whitespace(phonemes)
   return phonemes
+
+
+def chinese_cleaner(text):
+  phonemes = phonemize(text, language='cmn', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
+  phonemes = collapse_whitespace(phonemes)
+  return phonemes
